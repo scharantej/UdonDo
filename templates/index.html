@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Japanese Restaurants</title>
+</head>
+<body>
+<h1>Japanese Restaurants</h1>
+<form action="/search" method="POST">
+<input type="text" name="search" placeholder="Search by restaurant name">
+<input type="submit" value="Search">
+</form>
+<ul>
+{% for restaurant in restaurants %}
+<li><a href="/restaurant/{{ restaurant.id }}">{{ restaurant.name }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
